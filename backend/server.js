@@ -2,7 +2,8 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const db = require("./db");
+const userRoutes = require("./routes/users");
+const authRoutes = require("./routes/auth");
 
 const app = express();
 
@@ -15,15 +16,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/users", async (req, res) => {
-    try {
-        const userData = await db.query("SELECT * FROM users");
-        res.json(userData.rows);
-    } catch (error) {
-        console.error("Error fetching users:", error);
-        res.status(500).json({ error: "Internal Server Error" });
-    }
-});
+app.use("/users", userRoutes);
+app.use("/auth", authRoutes);
 
 const PORT = process.env.PORT || 5000;
 
