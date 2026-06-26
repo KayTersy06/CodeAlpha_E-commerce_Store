@@ -32,7 +32,6 @@ CREATE TABLE users (
 CREATE TABLE categories (
     category_id INTEGER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     category_name VARCHAR(100) NOT NULL,
-    description TEXT
 );
 
 CREATE TABLE products (
