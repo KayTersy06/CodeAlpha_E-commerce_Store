@@ -5,6 +5,9 @@ const cors = require("cors");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const categoryRoutes = require("./routes/categories");
+const productRoutes = require("./routes/products");
+const cartRoutes = require("./routes/cart");
+const orderRoutes = require("./routes/orders");
 
 const app = express();
 
@@ -20,6 +23,9 @@ app.get("/", (req, res) => {
 app.use("/users", userRoutes);
 app.use("/auth", authRoutes);
 app.use("/categories", categoryRoutes);
+app.use("/products", productRoutes);
+app.use("/cart", cartRoutes);
+app.use("/orders", orderRoutes);
 
 const PORT = process.env.PORT || 5000;
 
