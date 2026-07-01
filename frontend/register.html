@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Coach Tersy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Coach Tersy</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="categories.html">Categories</a>
+          <a href="cart.html">Cart</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page auth-page">
+      <form id="registerForm" class="card form-card">
+        <h1>Create account</h1>
+        <p>Join Coach Tersy and get started today.</p>
+        <input type="text" id="fullName" placeholder="Full name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <input type="tel" id="phone" placeholder="Phone" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm password" required />
+        <button type="submit" class="btn btn-primary">Register</button>
+        <p class="muted">Already have an account? <a href="login.html">Login</a></p>
+        <div id="registerMessage" class="message"></div>
+      </form>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/register.js"></script>
+  </body>
+</html>

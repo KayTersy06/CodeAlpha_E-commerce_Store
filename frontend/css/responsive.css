@@ -1,0 +1,13 @@
+.loader { padding: 1rem 0; font-weight: 600; }
+@media (max-width: 900px) {
+  .product-grid, .category-grid, .feature-grid, .testimonial-grid, .stats-grid, .checkout-grid, .detail-card, .hero-content { grid-template-columns: 1fr; }
+  .filters { grid-template-columns: 1fr; }
+}
+@media (max-width: 720px) {
+  .menu-toggle { display: inline-block; }
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; right: 1rem; background: white; padding: 1rem; border-radius: 14px; box-shadow: var(--shadow); }
+  .nav-links.open { display: flex; }
+  .hero { padding: 3rem 0; }
+  .cart-item, .footer-content { flex-direction: column; align-items: flex-start; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
+}

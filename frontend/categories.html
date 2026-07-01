@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories | Coach Tersy</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="index.html" class="brand">Coach Tersy</a>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="products.html">Products</a>
+          <a href="categories.html" class="active">Categories</a>
+          <a href="cart.html">Cart</a>
+          <a href="login.html" id="authLink">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container page">
+      <div class="page-header">
+        <div>
+          <p class="eyebrow">Browse by wellness goal</p>
+          <h1>Categories</h1>
+        </div>
+      </div>
+      <div id="categoriesLoader" class="loader">Loading categories...</div>
+      <div id="categoriesGrid" class="category-grid"></div>
+      <div id="categoryProducts" class="product-grid mt-2"></div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/categories.js"></script>
+  </body>
+</html>
